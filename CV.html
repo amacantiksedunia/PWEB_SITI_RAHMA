@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Anda - CV Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="container">
+        <h2>Curriculum Vitae</h2>
+        <p><strong>Nama:</strong> <span id="cv-nama"></span></p>
+        <p><strong>Email:</strong> <span id="cv-email"></span></p>
+        <p><strong>Tempat & Tanggal Lahir:</strong> <span id="cv-ttl"></span></p>
+        <p><strong>Riwayat Pendidikan:</strong></p>
+        <p id="cv-pendidikan"></p>
+
+        <a href="form.html" class="btn">Edit Data</a>
+        <a href="login.html" class="logout" onclick="logout()">Logout</a>
+    </div>
+
+    <script>
+        function checkLogin() {
+            
+
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("cv-nama").innerText = params.get("nama");
+            document.getElementById("cv-email").innerText = localStorage.getItem("userEmail");
+            document.getElementById("cv-ttl").innerText = params.get("ttl");
+            document.getElementById("cv-pendidikan").innerText = params.get("pendidikan");
+        }
+
+        function logout() {
+            localStorage.removeItem("userEmail");
+        }
+    </script>
+</body>
+</html>

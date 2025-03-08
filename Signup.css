@@ -1,0 +1,61 @@
+/* Contoh CSS untuk form signup */
+#signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+#signup .kolom {
+    flex: 1;
+    padding-right: 50px;
+}
+
+#signup img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tbl-pink {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tbl-pink:hover {
+    background-color: #ff4a3d;
+}
+
+.tbl-biru {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tbl-biru:hover {
+    background-color: #2980b9;
+}

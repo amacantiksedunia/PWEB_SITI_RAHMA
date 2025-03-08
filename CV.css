@@ -1,0 +1,94 @@
+/* Styling untuk tampilan CV */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cv-container {
+    width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cv-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+}
+
+.cv-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    object-fit: cover;
+}
+
+.cv-header h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cv-header p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.cv-header a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cv-header a:hover {
+    text-decoration: underline;
+}
+
+.cv-section {
+    text-align: left;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cv-section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.cv-section p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.btn-back {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
