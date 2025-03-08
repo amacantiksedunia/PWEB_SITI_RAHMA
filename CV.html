@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Anda - CV Maker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CV.css">
 </head>
-    <div class="container">
+<body>
+    <div class="luaran">
         <h2>Curriculum Vitae</h2>
         <p><strong>Nama:</strong> <span id="cv-nama"></span></p>
         <p><strong>Email:</strong> <span id="cv-email"></span></p>
-        <p><strong>Tempat & Tanggal Lahir:</strong> <span id="cv-ttl"></span></p>
+        <p><strong>No. Telepon:</strong> <span id="cv-notelp"></span></p>
+        <p><strong>Alamat:</strong> <span id="cv-alamat"></span></p>
+        <p><strong>LinkedIn:</strong> <span id="cv-linkedin"></span></p>
+        <p><strong>Profile:</strong> <span id="cv-profile"></span></p>
         <p><strong>Riwayat Pendidikan:</strong></p>
         <p id="cv-pendidikan"></p>
+        <p><strong>Sertifikasi:</strong> <span id="cv-sertifikasi"></span></p>
+        <p><strong>Skills:</strong> <span id="cv-skills"></span></p>
+        <p><strong>Proyek:</strong> <span id="cv-proyek"></span></p>
+        <p><strong>Minat:</strong> <span id="cv-minat"></span></p>
 
         <a href="form.html" class="btn">Edit Data</a>
         <a href="login.html" class="logout" onclick="logout()">Logout</a>
     </div>
 
     <script>
-        function checkLogin() {
-            
-
-            const params = new URLSearchParams(window.location.search);
-            document.getElementById("cv-nama").innerText = params.get("nama");
-            document.getElementById("cv-email").innerText = localStorage.getItem("userEmail");
-            document.getElementById("cv-ttl").innerText = params.get("ttl");
-            document.getElementById("cv-pendidikan").innerText = params.get("pendidikan");
+        function loadCVData() {
+            const cvData = JSON.parse(localStorage.getItem("cvData"));
+            if (cvData) {
+                document.getElementById("cv-nama").innerText = cvData.nama;
+                document.getElementById("cv-email").innerText = cvData.email;
+                document.getElementById("cv-notelp").innerText = cvData.notelp;
+                document.getElementById("cv-alamat").innerText = cvData.alamat;
+                document.getElementById("cv-linkedin").innerText = cvData.linkedin;
+                document.getElementById("cv-profile").innerText = cvData.profile;
+                document.getElementById("cv-pendidikan").innerText = cvData.pendidikan;
+                document.getElementById("cv-sertifikasi").innerText = cvData.sertifikasi;
+                document.getElementById("cv-skills").innerText = cvData.skills;
+                document.getElementById("cv-proyek").innerText = cvData.proyek;
+                document.getElementById("cv-minat").innerText = cvData.minat;
+            }
         }
 
         function logout() {
-            localStorage.removeItem("userEmail");
+            localStorage.removeItem("cvData");
+            window.location.href = "login.html";
         }
+
+        window.onload = loadCVData;
     </script>
 </body>
 </html>
